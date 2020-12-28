@@ -26,11 +26,14 @@ class Feedback extends Component {
     }
 
     countTotalFeedback() {
-        return Object.values(this.state).reduce((acc, value) => acc + value, 0);
+        const { good, neutral, bad } = this.state;
+        return good + neutral + bad;
+        // return Object.values(this.state).reduce((acc, value) => acc + value, 0);
     }
 
     countPositiveFeedbackPercentage() {
-        return Math.round(this.state.good / this.countTotalFeedback() * 100);
+        const { good } = this.state;
+        return Math.round(good / this.countTotalFeedback() * 100);
     }
 
     render() {
