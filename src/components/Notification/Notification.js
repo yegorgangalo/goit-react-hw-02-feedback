@@ -1,5 +1,6 @@
 import React from 'react';
+import s from './Notification.module.css';
 
 export default function Notification({message}) {
-    return <p>{message}</p>
+    return <p className={s.message}>{message}</p>
 }

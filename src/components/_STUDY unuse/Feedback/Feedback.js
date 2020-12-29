@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 
 class Feedback extends Component {
     static defaultProps = {
